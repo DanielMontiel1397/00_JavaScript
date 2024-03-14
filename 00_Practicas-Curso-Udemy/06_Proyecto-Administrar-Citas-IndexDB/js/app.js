@@ -343,7 +343,7 @@ function crearDB(){
         console.log('BD creada');
 
         DB = crearDB.result;
-
+        console.log(DB);
         //Mostrar citas al cargar (Pero indexDB ya esta listo)
         ui.imprimirCitas();
         
@@ -352,7 +352,7 @@ function crearDB(){
     //Definir el schema
     crearDB.onupgradeneeded = function(e){
         const db = e.target.result;
-
+        console.log(db);
         const objectStore = db.createObjectStore('citas',{
             keyPath: 'id',
             autoIncrement: true
